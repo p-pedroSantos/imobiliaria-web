@@ -39,7 +39,7 @@ Projeto desenvolvido como protótipo para uma imobiliária fictícia. O sistema 
 
 Atualize o arquivo src/main/resources/application.properties com as credenciais do banco:
 
-    ```
+    
     spring.datasource.url=jdbc:mysql://localhost:3306/imobiliaria
     spring.datasource.username=seu_usuario
     spring.datasource.password=sua_senha
