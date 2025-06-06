@@ -59,6 +59,7 @@ Compile e execute:
 Execute o comando:
 
 docker-compose up --build
+
 A aplicação estará disponível em:
 
 App: http://localhost:8080
