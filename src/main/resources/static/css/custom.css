@@ -1,0 +1,149 @@
+/* Estilos personalizados que complementam o Bootstrap */
+
+/* Melhora o visual dos cards na página inicial */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Garante que todos os cards tenham a mesma altura */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ocupa toda a altura do card */
+}
+
+.card-title {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Container para os botões - SOLUÇÃO PARA ALINHAMENTO */
+.card-buttons {
+    margin-top: auto; /* Empurra para baixo */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Espaço entre os botões */
+}
+
+/* Botões dentro dos cards */
+.card-buttons > .btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilo para a navbar */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container principal */
+.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Estilo para as tabelas */
+.table {
+    margin-top: 1.5rem;
+}
+
+.table th {
+    background-color: #f8f9fa;
+}
+
+/* Botões de ação */
+.btn-action {
+    margin-right: 5px;
+    min-width: 70px;
+}
+
+/* Formulários */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos específicos para a lista de imóveis */
+
+/* Badges para tipos de imóveis */
+.badge.bg-success {
+    background-color: #28a745 !important;
+}
+
+.badge.bg-info {
+    background-color: #17a2b8 !important;
+}
+
+/* Ajuste para tabelas */
+.table-responsive {
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste para células da tabela */
+.table td, .table th {
+    vertical-align: middle;
+    padding: 12px 15px;
+}
+
+/* Ajuste para botões com ícones */
+.btn i {
+    margin-right: 5px;
+}
+/* Estilos específicos para formulários */
+
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.form-control, .form-select {
+    border: 1px solid #ced4da;
+    padding: 0.5rem 0.75rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+/* Ajuste para textarea */
+textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Botões do formulário */
+.form-container .btn {
+    min-width: 120px;
+}

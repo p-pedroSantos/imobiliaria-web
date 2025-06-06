@@ -1,0 +1,53 @@
+# Ignore pasta de build do Maven
+target/
+# Ignorar a pasta target específica (com ou sem barra)
+target
+/target
+
+# Evita subir o wrapper do Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Exceções para builds dentro de src (se quiser manter esses builds)
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# MySQL Docker volume / dados persistentes
+mysql-data/
+db_data/
+
+# STS (Spring Tool Suite) IDE
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# Build genérico (geralmente do Gradle)
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# VS Code editor
+.vscode/
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Configurações locais
+#.env
+
+# Arquivos específicos do Docker Compose
+#docker-compose.override.yml

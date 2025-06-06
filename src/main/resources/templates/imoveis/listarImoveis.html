@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lista de Imóveis</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Seu CSS personalizado -->
+    <link href="/css/custom.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar (igual às outras páginas) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">Imobiliária</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/imoveis">Imóveis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/corretores">Corretores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/anuncios">Anúncios</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Mensagem de sucesso -->
+        <div th:if="${sucesso}" class="alert alert-success alert-dismissible fade show">
+            <span th:text="${sucesso}"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+
+        <!-- Mensagem de erro -->
+        <div th:if="${erro}" class="alert alert-danger alert-dismissible fade show">
+            <span th:text="${erro}"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Lista de Imóveis</h1>
+            <a th:href="@{/imoveis/novo}" class="btn btn-primary">
+                <i class="bi bi-plus-lg"></i> Novo Imóvel
+            </a>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>ID</th>
+                        <th>Tipo</th>
+                        <th>Bairro</th>
+                        <th>Descrição</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="imovel : ${imoveis}">
+                        <td th:text="${imovel.id}"></td>
+                        <td>
+                            <span class="badge" 
+                                  th:classappend="${imovel.tipo == 'CASA'} ? 'bg-success' : 'bg-info'"
+                                  th:text="${imovel.tipo}">
+                            </span>
+                        </td>
+                        <td th:text="${imovel.bairro}"></td>
+                        <td th:text="${imovel.descricao}"></td>
+                        <td>
+                            <a th:href="@{/imoveis/editar/{id}(id=${imovel.id})}" 
+                               class="btn btn-sm btn-warning btn-action">
+                                <i class="bi bi-pencil"></i> Editar
+                            </a>
+                            <a th:href="@{/imoveis/excluir/{id}(id=${imovel.id})}" 
+                               class="btn btn-sm btn-danger btn-action"
+                               onclick="return confirm('Deseja realmente excluir este imóvel?');">
+                                <i class="bi bi-trash"></i> Excluir
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Seu JS personalizado -->
+    <script src="/js/custom.js"></script>
+</body>
+</html>
