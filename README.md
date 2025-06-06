@@ -49,14 +49,15 @@ Atualize o arquivo src/main/resources/application.properties com as credenciais 
     spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 
 Compile e execute:
-./mvnw spring-boot:run
+
+    ./mvnw spring-boot:run
 
 ### 🐳 Executando com Docker (Recomendado)
 ## Requer Docker e Docker Compose instalados.
 
 Execute o comando:
 
-docker-compose up --build
+    docker-compose up --build
 
 A aplicação estará disponível em:
 
@@ -65,18 +66,16 @@ App: http://localhost:8080
 Banco MySQL: porta 3306
 
 🗂 Estrutura principal do projeto
-css
-Copiar
-Editar
-imobiliaria-web/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── ... (controllers, services, models, repositories)
-│   │   └── resources/
-│   │       ├── templates/ (HTMLs Thymeleaf)
-│   │       └── application.properties
-├── Dockerfile
-├── docker-compose.yaml
-├── pom.xml
-└── README.md
+
+    imobiliaria-web/
+    ├── src/
+    │   ├── main/
+    │   │   ├── java/
+    │   │   │   └── ... (controllers, services, models, repositories)
+    │   │   └── resources/
+    │   │       ├── templates/ (HTMLs Thymeleaf)
+    │   │       └── application.properties
+    ├── Dockerfile
+    ├── docker-compose.yaml
+    ├── pom.xml
+    └── README.md
