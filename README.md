@@ -31,8 +31,8 @@ Projeto desenvolvido como protótipo para uma imobiliária fictícia. O sistema 
 
 ### 🔽 Clonando o repositório
 
-git clone https://github.com/p-pedroSantos/imobiliaria-web.git
-cd imobiliaria-web
+    git clone https://github.com/p-pedroSantos/imobiliaria-web.git
+    cd imobiliaria-web
 
 ### Executando com Java (sem Docker)
 ## Configure seu banco de dados (ex: MySQL) e crie um schema com o nome que desejar (ex: imobiliaria).
