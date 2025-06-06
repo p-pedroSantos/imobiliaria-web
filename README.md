@@ -39,15 +39,14 @@ cd imobiliaria-web
 
 Atualize o arquivo src/main/resources/application.properties com as credenciais do banco:
 
+    ```
+    spring.datasource.url=jdbc:mysql://localhost:3306/imobiliaria
+    spring.datasource.username=seu_usuario
+    spring.datasource.password=sua_senha
 
-  spring.datasource.url=jdbc:mysql://localhost:3306/imobiliaria
-  spring.datasource.username=seu_usuario
-  spring.datasource.password=sua_senha
-
-
-  spring.jpa.hibernate.ddl-auto=update
-  spring.jpa.show-sql=true
-  spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+    spring.jpa.hibernate.ddl-auto=update
+    spring.jpa.show-sql=true
+    spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 
 Compile e execute:
 ./mvnw spring-boot:run
